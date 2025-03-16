@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "startDate": "2025-03-17T00:00:00.000-04:00",
+  "chapterOffset": 10,
+  "templates": {
+    "intercession": "Here offer any personal prayer requests or intercessions on behalf of others. Conclude by praising God in your own words or by praying in tongues."
+  },
+  "weeks": [
+    {
+      "title": "Against Sin and the Vices",
+      "openingSentenceCollection": "lent",
+      "includeClosingSentence": true,
+      "variables": {
+        "psalm-appointed": {
+          "type": "psalm",
+          "references": [20, 21, 22, 23, 24]
+        },
+        "hb-reading": {
+          "type": "scripture",
+          "references": [
+            "Numbers 5",
+            "Numbers 6",
+            "Numbers 8",
+            "Numbers 9",
+            "Numbers 11"
+          ]
+        },
+        "gospel-reading": {
+          "type": "scripture",
+          "references": ["John 1", "John 2", "John 3", "John 4", "John 5"]
+        },
+        "lectio": {
+          "type": "lectio",
+          "references": [
+            "first-commandment",
+            "second-commandment",
+            "third-commandment",
+            "fourth-commandment",
+            "fifth-commandment"
+          ]
+        }
+      },
+      "liturgy": [
+        {
+          "type": "prayer",
+          "name": "Mea Labia"
+        },
+        {
+          "type": "antiphon",
+          "season": "lent"
+        },
+        {
+          "type": "prayer",
+          "name": "General Confession"
+        },
+        {
+          "type": "prayer",
+          "name": "Jesus Prayer",
+          "repeat": 3
+        },
+        {
+          "type": "prayer",
+          "name": "Venite Lent"
+        },
+        {
+          "type": "variable",
+          "label": "Psalm Appointed",
+          "identifier": "psalm-appointed"
+        },
+        {
+          "type": "variable",
+          "label": "Hebrew Bible Reading",
+          "identifier": "hb-reading"
+        },
+        {
+          "type": "prayer",
+          "name": "Te Deum Laudamus",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Gospel Reading",
+          "identifier": "gospel-reading"
+        },
+        {
+          "type": "variable",
+          "label": "Lectio Divina",
+          "identifier": "lectio"
+        },
+        {
+          "type": "prayer",
+          "name": "The Apostles Creed",
+          "includeTitle": true
+        },
+        {
+          "type": "prayer",
+          "name": "Kyrie Eleison"
+        },
+        {
+          "type": "prayer",
+          "name": "The Lord's Prayer"
+        },
+        {
+          "type": "prayer",
+          "name": "Gloria Patri"
+        },
+        {
+          "type": "examen"
+        },
+        {
+          "type": "prayer",
+          "name": "Short Thanksgiving"
+        },
+        {
+          "type": "collect",
+          "name": "St Joseph"
+        },
+        {
+          "type": "instruction",
+          "identifier": "intercession"
+        }
+      ]
+    }
+  ]
+}

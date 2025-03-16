@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root, body {
+    --pb-font: "Cormorant Garamond", "Garamond", serif;
+    --font-size-sm: 12pt;
+    --font-size-md: 14pt;
+    --font-size-lg: 16pt;
+    --font-size-xl: 20pt;
+    --spacing-sm: 4px;
+    --spacing-md: calc(var(--spacing-sm) * 4);
+    --spacing-lg: calc(var(--spacing-sm) * 12);
+    --spacing-xl: calc(var(--spacing-sm) * 24);
+}
+
+.page {
+    width: 5.83in;
+    font-family: var(--pb-font);
+}

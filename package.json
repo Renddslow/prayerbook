@@ -1,0 +1,23 @@
+{
+  "name": "prayerbook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve",
+    "build": "node build.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "lit": "^3.2.1",
+    "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "esbuild": "^0.25.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  }
+}
