@@ -8,11 +8,14 @@ export class Instruction extends LitElement {
       display: block;
       font-style: italic;
       margin-block: 0;
+      font-size: var(--font-size-md);
     }
   `;
 
   render() {
-    return html`<p class="instruction"><slot></slot></p>`;
+    return html`<prayerbook-block
+      ><p class="instruction"><slot></slot></p
+    ></prayerbook-block>`;
   }
 }
 

@@ -1,6 +1,7 @@
 {
   "version": 1,
   "startDate": "2025-03-17T00:00:00.000-04:00",
+  "weekdays": [1, 2, 3, 4, 5],
   "chapterOffset": 10,
   "templates": {
     "intercession": "Here offer any personal prayer requests or intercessions on behalf of others. Conclude by praising God in your own words or by praying in tongues."
@@ -47,7 +48,7 @@
         },
         {
           "type": "antiphon",
-          "season": "lent"
+          "name": "lent"
         },
         {
           "type": "prayer",
@@ -60,7 +61,8 @@
         },
         {
           "type": "prayer",
-          "name": "Venite Lent"
+          "name": "Venite (Lent)",
+          "includeTitle": true
         },
         {
           "type": "variable",
@@ -114,6 +116,552 @@
         {
           "type": "collect",
           "name": "St Joseph"
+        },
+        {
+          "type": "instruction",
+          "identifier": "intercession"
+        }
+      ]
+    },
+    {
+      "title": "Against the Devil",
+      "openingSentenceCollection": "lent",
+      "includeClosingSentence": true,
+      "variables": {
+        "psalm-appointed": {
+          "type": "psalm",
+          "references": [25, 26, 27, 28, 29]
+        },
+        "hb-reading": {
+          "type": "scripture",
+          "references": [
+            "Numbers 12",
+            "Numbers 13",
+            "Numbers 14:1–25",
+            "Numbers 14:26–45",
+            "Numbers 15"
+          ]
+        },
+        "gospel-reading": {
+          "type": "scripture",
+          "references": ["John 6", "John 7", "John 8", "John 9", "John 10"]
+        },
+        "lectio": {
+          "type": "lectio",
+          "references": [
+            "sixth-commandment",
+            "seventh-commandment",
+            "eighth-commandment",
+            "ninth-commandment",
+            "tenth-commandment"
+          ]
+        }
+      },
+      "liturgy": [
+        {
+          "type": "prayer",
+          "name": "Mea Labia"
+        },
+        {
+          "type": "antiphon",
+          "name": "lent"
+        },
+        {
+          "type": "prayer",
+          "name": "Crux Sacra"
+        },
+        {
+          "type": "prayer",
+          "name": "General Confession"
+        },
+        {
+          "type": "prayer",
+          "name": "Jesus Prayer",
+          "repeat": 3
+        },
+        {
+          "type": "prayer",
+          "name": "Venite (Lent)",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Psalm Appointed",
+          "identifier": "psalm-appointed"
+        },
+        {
+          "type": "variable",
+          "label": "Hebrew Bible Reading",
+          "identifier": "hb-reading"
+        },
+        {
+          "type": "prayer",
+          "name": "Te Deum Laudamus",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Gospel Reading",
+          "identifier": "gospel-reading"
+        },
+        {
+          "type": "variable",
+          "label": "Lectio Divina",
+          "identifier": "lectio"
+        },
+        {
+          "type": "prayer",
+          "name": "The Apostles Creed",
+          "includeTitle": true
+        },
+        {
+          "type": "prayer",
+          "name": "Kyrie Eleison"
+        },
+        {
+          "type": "prayer",
+          "name": "The Lord's Prayer"
+        },
+        {
+          "type": "prayer",
+          "name": "Gloria Patri"
+        },
+        {
+          "type": "examen"
+        },
+        {
+          "type": "prayer",
+          "name": "Short Thanksgiving"
+        },
+        {
+          "type": "collect",
+          "name": "Lent 3"
+        },
+        {
+          "type": "instruction",
+          "identifier": "intercession"
+        }
+      ]
+    },
+    {
+      "title": "Confession and Praying in Community",
+      "openingSentenceCollection": "lent",
+      "includeClosingSentence": true,
+      "variables": {
+        "psalm-appointed": {
+          "type": "psalm",
+          "references": [30, 31, 32, 33, 34]
+        },
+        "hb-reading": {
+          "type": "scripture",
+          "references": [
+            "Numbers 16:1–19",
+            "Numbers 16:20–50",
+            "Numbers 17",
+            "Numbers 20",
+            "Numbers 21"
+          ]
+        },
+        "gospel-reading": {
+          "type": "scripture",
+          "references": [
+            "John 11",
+            "John 12:1–11",
+            "John 12:12–36",
+            "John 12:37–50",
+            "John 13"
+          ]
+        },
+        "lectio": {
+          "type": "lectio",
+          "references": [
+            "first-commandment",
+            "second-commandment",
+            "third-commandment",
+            "fourth-commandment",
+            "fifth-commandment"
+          ]
+        }
+      },
+      "liturgy": [
+        {
+          "type": "prayer",
+          "name": "Mea Labia"
+        },
+        {
+          "type": "antiphon",
+          "name": "lent"
+        },
+        {
+          "type": "prayer",
+          "name": "Crux Sacra"
+        },
+        {
+          "type": "prayer",
+          "name": "General Confession"
+        },
+        {
+          "type": "instruction",
+          "text": "Consider one particular way in which you have sinned against God or your neighbor this week. Confess that specific sin to God and ask for his forgiveness. Take a moment and sit in his grace. As you pray the Jesus Prayer, consider how the Spirit is directing you to respond to your repentance."
+        },
+        {
+          "type": "prayer",
+          "name": "Jesus Prayer",
+          "repeat": 3
+        },
+        {
+          "type": "prayer",
+          "name": "Venite (Lent)",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Psalm Appointed",
+          "identifier": "psalm-appointed"
+        },
+        {
+          "type": "variable",
+          "label": "Hebrew Bible Reading",
+          "identifier": "hb-reading"
+        },
+        {
+          "type": "prayer",
+          "name": "Te Deum Laudamus",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Gospel Reading",
+          "identifier": "gospel-reading"
+        },
+        {
+          "type": "variable",
+          "label": "Lectio Divina",
+          "identifier": "lectio"
+        },
+        {
+          "type": "prayer",
+          "name": "The Apostles Creed",
+          "includeTitle": true
+        },
+        {
+          "type": "prayer",
+          "name": "Kyrie Eleison"
+        },
+        {
+          "type": "prayer",
+          "name": "The Lord's Prayer"
+        },
+        {
+          "type": "prayer",
+          "name": "Gloria Patri"
+        },
+        {
+          "type": "examen"
+        },
+        {
+          "type": "prayer",
+          "name": "Short Thanksgiving"
+        },
+        {
+          "type": "collect",
+          "name": "Lent 4"
+        },
+        {
+          "type": "instruction",
+          "identifier": "intercession"
+        }
+      ]
+    },
+    {
+      "title": "Developing a Rule of Life, pt 1",
+      "openingSentenceCollection": "lent",
+      "includeClosingSentence": true,
+      "variables": {
+        "psalm-appointed": {
+          "type": "psalm",
+          "references": [35, 36, 37, 38, 39]
+        },
+        "hb-reading": {
+          "type": "scripture",
+          "references": [
+            "Numbers 22",
+            "Numbers 23",
+            "Numbers 24",
+            "Numbers 25",
+            "Deuteronomy 3"
+          ]
+        },
+        "gospel-reading": {
+          "type": "scripture",
+          "references": ["John 14", "John 15", "John 16", "John 17", "Mark 1"]
+        },
+        "lectio": {
+          "type": "lectio",
+          "references": [
+            "sixth-commandment",
+            "seventh-commandment",
+            "eighth-commandment",
+            "ninth-commandment",
+            "tenth-commandment"
+          ]
+        }
+      },
+      "liturgy": [
+        {
+          "type": "prayer",
+          "name": "Mea Labia"
+        },
+        {
+          "type": "antiphon",
+          "name": "lent"
+        },
+        {
+          "type": "prayer",
+          "name": "Crux Sacra"
+        },
+        {
+          "type": "prayer",
+          "name": "General Confession"
+        },
+        {
+          "type": "instruction",
+          "text": "Consider one particular way in which you have sinned against God or your neighbor this week. Confess that specific sin to God and ask for his forgiveness. Take a moment and sit in his grace. As you pray the Jesus Prayer, consider how the Spirit is directing you to respond to your repentance."
+        },
+        {
+          "type": "prayer",
+          "name": "Jesus Prayer",
+          "repeat": 3
+        },
+        {
+          "type": "prayer",
+          "name": "Venite (Lent)",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Psalm Appointed",
+          "identifier": "psalm-appointed"
+        },
+        {
+          "type": "variable",
+          "label": "Hebrew Bible Reading",
+          "identifier": "hb-reading"
+        },
+        {
+          "type": "prayer",
+          "name": "Te Deum Laudamus",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Gospel Reading",
+          "identifier": "gospel-reading"
+        },
+        {
+          "type": "variable",
+          "label": "Lectio Divina",
+          "identifier": "lectio"
+        },
+        {
+          "type": "prayer",
+          "name": "The Apostles Creed",
+          "includeTitle": true
+        },
+        {
+          "type": "prayer",
+          "name": "Kyrie Eleison"
+        },
+        {
+          "type": "prayer",
+          "name": "The Lord's Prayer"
+        },
+        {
+          "type": "prayer",
+          "name": "Gloria Patri"
+        },
+        {
+          "type": "examen"
+        },
+        {
+          "type": "prayer",
+          "name": "Short Thanksgiving"
+        },
+        {
+          "type": "collect",
+          "name": "Lent 5"
+        },
+        {
+          "type": "instruction",
+          "identifier": "intercession"
+        }
+      ]
+    },
+    {
+      "title": "Developing a Rule of Life, pt 2",
+      "openingSentenceCollection": "holy-week",
+      "includeClosingSentence": true,
+      "variables": {
+        "psalm-appointed": {
+          "type": "psalm",
+          "references": [27, 71, 69, 116, 22]
+        },
+        "hb-reading": {
+          "type": "scripture",
+          "references": [
+            "Zechariah 9",
+            "Isaiah 49",
+            "Isaiah 50",
+            "Exodus 12",
+            "Isaiah 53"
+          ]
+        },
+        "gospel-reading": {
+          "type": "scripture",
+          "references": [
+            "Mark 11:1–10",
+            "John 12:1–11",
+            "Matthew 26:14–25",
+            "John 13:1–15",
+            "John 18–19"
+          ]
+        },
+        "lectio": {
+          "type": "lectio",
+          "references": [
+            "anointing",
+            "eucharist",
+            "strike-shepherd",
+            "gethsemane",
+            "sword"
+          ]
+        },
+        "collect": {
+          "type": "collect",
+          "references": [
+            "Monday of Holy Week",
+            "Tuesday of Holy Week",
+            "Wednesday of Holy Week",
+            "Maundy Thursday",
+            "Good Friday"
+          ]
+        }
+      },
+      "liturgy": [
+        {
+          "type": "instruction",
+          "text": "This week is Holy Week. Spend time in intentional prayer and reflection as you walk with Jesus in his suffering and death."
+        },
+        {
+          "type": "prayer",
+          "name": "Mea Labia"
+        },
+        {
+          "type": "antiphon",
+          "name": "holy-week"
+        },
+        {
+          "type": "prayer",
+          "name": "Crux Sacra"
+        },
+        {
+          "type": "prayer",
+          "name": "General Confession"
+        },
+        {
+          "type": "instruction",
+          "text": "Consider one particular way in which you have sinned against God or your neighbor this week. Confess that specific sin to God and ask for his forgiveness. Take a moment and sit in his grace. As you pray the Jesus Prayer, consider how the Spirit is directing you to respond to your repentance."
+        },
+        {
+          "type": "prayer",
+          "name": "Jesus Prayer",
+          "repeat": 3
+        },
+        {
+          "type": "prayer",
+          "name": "Venite (Lent)",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Psalm Appointed",
+          "identifier": "psalm-appointed"
+        },
+        {
+          "type": "variable",
+          "label": "Hebrew Bible Reading",
+          "identifier": "hb-reading"
+        },
+        {
+          "type": "prayer",
+          "name": "Te Deum Laudamus",
+          "includeTitle": true
+        },
+        {
+          "type": "variable",
+          "label": "Gospel Reading",
+          "identifier": "gospel-reading"
+        },
+        {
+          "type": "variable",
+          "label": "Lectio Divina",
+          "identifier": "lectio"
+        },
+        {
+          "type": "prayer",
+          "name": "The Apostles Creed",
+          "includeTitle": true
+        },
+        {
+          "type": "prayer",
+          "name": "Kyrie Eleison"
+        },
+        {
+          "type": "prayer",
+          "name": "The Lord's Prayer"
+        },
+        {
+          "type": "prayer",
+          "name": "Gloria Patri"
+        },
+        {
+          "type": "examen"
+        },
+        {
+          "type": "prayer",
+          "name": "Short Thanksgiving"
+        },
+        {
+          "type": "variable",
+          "identifier": "collect"
+        },
+        {
+          "type": "instruction",
+          "identifier": "intercession"
+        }
+      ]
+    },
+    {
+      "title": "The Contemplative Pastor",
+      "openingSentenceCollection": "easter",
+      "includeClosingSentence": true,
+      "liturgy": [
+        {
+          "type": "instruction",
+          "text": "This week as we contemplate the resurrection of Jesus, you will go back to the very start, with the very first prayer you learned in this book. This week's prayers are stripped all the way down to the Jesus Prayer and the Lord's Prayer. Spend time in silence and contemplation as you pray these prayers."
+        },
+        {
+          "type": "prayer",
+          "name": "Jesus Prayer",
+          "repeat": 100
+        },
+        {
+          "type": "prayer",
+          "name": "The Lord's Prayer"
+        },
+        {
+          "type": "collect",
+          "name": "Easter 1"
         },
         {
           "type": "instruction",

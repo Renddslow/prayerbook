@@ -5,7 +5,7 @@ import { customElement } from "lit/decorators.js";
 export class Block extends LitElement {
   static styles = css`
     .block {
-      break-inside: avoid-page;
+      break-inside: avoid;
       margin-block: var(--spacing-md);
     }
   `;

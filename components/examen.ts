@@ -7,6 +7,7 @@ export class Examen extends LitElement {
     .examen {
       display: grid;
       grid-gap: var(--spacing-md);
+      font-size: var(--font-size-md);
 
       p {
         margin-block: 0;

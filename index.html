@@ -14,15 +14,116 @@
     <script src="dist/index.js" type="module"></script>
   </head>
   <body>
-    <article class="page">
-      <prayerbook-chapter-heading
-        title="Against Sin and the Vices"
-        subtitle="Week 10"
-      ></prayerbook-chapter-heading>
-      <prayerbook-day-heading
-        title="Monday, March 16, 2025"
-      ></prayerbook-day-heading>
-      <prayerbook-examen></prayerbook-examen>
-    </article>
+    <article class="page"></article>
+    <script>
+      (async () => {
+        const formatter = new Intl.DateTimeFormat("en-US", {
+          weekday: "long",
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        });
+        const search = new URLSearchParams(window.location.search);
+        if (search.get("p")) {
+          const data = await fetch(`prayerbooks/${search.get("p")}.json`).then(
+            (d) => d.json(),
+          );
+          const page = document.querySelector(".page");
+          const startDate = new Date(data.startDate);
+
+          data.weeks.forEach((week, idx) => {
+            const chapterHeading = document.createElement(
+              "prayerbook-chapter-heading",
+            );
+            chapterHeading.title = week.title;
+            chapterHeading.subtitle = `Week ${idx + (data.chapterOffset ?? 1)}`;
+            page.appendChild(chapterHeading);
+
+            data.weekdays.forEach((weekday, weekdayIdx) => {
+              const dateOffset = idx * 7;
+              const day = new Date(startDate);
+              day.setDate(day.getDate() + dateOffset);
+              if (day.getDay() !== weekday) {
+                day.setDate(day.getDate() + (weekday - day.getDay()));
+              }
+              const dayHeading = document.createElement(
+                "prayerbook-day-heading",
+              );
+              dayHeading.title = formatter.format(day);
+              page.appendChild(dayHeading);
+
+              week.liturgy.forEach((item) => {
+                if (["prayer", "antiphon", "collect"].includes(item.type)) {
+                  const liturgyItem =
+                    document.createElement("prayerbook-prayer");
+                  liturgyItem.type = item.type;
+                  liturgyItem.prayer = item.name;
+                  if (item.includeTitle) {
+                    liturgyItem.title = item.name;
+                  }
+                  if (item.repeat) {
+                    liturgyItem.repeat = item.repeat;
+                  }
+                  page.appendChild(liturgyItem);
+                  return;
+                }
+
+                if (item.type === "examen") {
+                  const examenItem =
+                    document.createElement("prayerbook-examen");
+                  page.appendChild(examenItem);
+                  return;
+                }
+
+                if (item.type === "instruction") {
+                  const instructionItem = document.createElement(
+                    "prayerbook-instruction",
+                  );
+                  instructionItem.innerHTML = item.text
+                    ? item.text
+                    : data.templates[item.identifier];
+                  page.appendChild(instructionItem);
+                  return;
+                }
+
+                if (item.type === "variable") {
+                  const variable = week.variables[item.identifier];
+                  switch (variable.type) {
+                    case "psalm":
+                      const psalmItem =
+                        document.createElement("prayerbook-psalm");
+                      psalmItem.reference = variable.references[weekdayIdx];
+                      psalmItem.label = item.label;
+                      page.appendChild(psalmItem);
+                      break;
+                    case "scripture":
+                      const scriptureItem = document.createElement(
+                        "prayerbook-scripture",
+                      );
+                      scriptureItem.reference = variable.references[weekdayIdx];
+                      scriptureItem.label = item.label;
+                      page.appendChild(scriptureItem);
+                      break;
+                    case "lectio":
+                      const lectioItem =
+                        document.createElement("prayerbook-lectio");
+                      lectioItem.reference = variable.references[weekdayIdx];
+                      lectioItem.label = item.label;
+                      page.appendChild(lectioItem);
+                      break;
+                  }
+                  return;
+                }
+
+                console.log(item);
+              });
+
+              const pageBreak = document.createElement("prayerbook-page-break");
+              page.appendChild(pageBreak);
+            });
+          });
+        }
+      })();
+    </script>
   </body>
 </html>

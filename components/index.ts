@@ -4,3 +4,8 @@ export { DayHeading } from "./day-heading";
 export { Examen } from "./examen";
 export { Instruction } from "./instruction";
 export { OpeningSentence } from "./opening-sentence";
+export { PageBreak } from "./page-break";
+export { Prayer } from "./prayer";
+export { Psalm } from "./psalm";
+export { Scripture } from "./scripture";
+export { ScriptureText } from "./scripture-text";

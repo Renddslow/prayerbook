@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@lit/task": "^1.0.2",
     "lit": "^3.2.1",
     "serve": "^14.2.4"
   },
