@@ -31,7 +31,10 @@ export class Scripture extends LitElement {
 
   private _fetchPrayerData = new Task(this, {
     task: async ([reference], { signal }) => {
-      const slug = reference.replace(/\s+/g, "-").toLowerCase();
+      const slug = reference
+        .replace(/:/, "_")
+        .replace(/\s+/g, "-")
+        .toLowerCase();
       const response = await fetch(`/data/scripture/${slug}.html`, {
         signal,
       });
