@@ -3,6 +3,7 @@ export { ChapterHeading } from "./chapter-heading";
 export { DayHeading } from "./day-heading";
 export { Examen } from "./examen";
 export { Instruction } from "./instruction";
+export { Lectio } from "./lectio";
 export { OpeningSentence } from "./opening-sentence";
 export { PageBreak } from "./page-break";
 export { Prayer } from "./prayer";
