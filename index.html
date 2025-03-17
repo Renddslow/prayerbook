@@ -110,13 +110,25 @@
                       lectioItem.reference = variable.references[weekdayIdx];
                       page.appendChild(lectioItem);
                       break;
+                    case "collect":
+                      const collect =
+                        document.createElement("prayerbook-prayer");
+                      collect.type = "collect";
+                      collect.prayer = variable.references[weekdayIdx];
+                      page.appendChild(collect);
                   }
-                  return;
                 }
-
-                console.log(item);
               });
 
+              if (week.includeClosingSentence) {
+                // Out of three
+                const offset = (idx * 7 + weekday) % 3;
+                const closingSentence =
+                  document.createElement("prayerbook-prayer");
+                closingSentence.type = "prayer";
+                closingSentence.prayer = `Closing Sentence ${offset + 1}`;
+                page.appendChild(closingSentence);
+              }
               const pageBreak = document.createElement("prayerbook-page-break");
               page.appendChild(pageBreak);
             });
